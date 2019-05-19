@@ -12,7 +12,7 @@ child: Text(
 textDirection: TextDirection.rtl,
 style: TextStyle(
 color: Colors.indigo[100],
-fontSize: 30,
+fontSize: 40,
 fontStyle: FontStyle.italic
 ),
 ),

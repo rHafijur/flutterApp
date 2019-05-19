@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './app_screens/home_screen.dart';
 
 void main()=>runApp(
-  new MyApp(),
+  new TestApp(),
 );
 
 
@@ -44,7 +44,61 @@ class MyApp extends StatelessWidget{
         ),
         body: new HomeScreen(),
       ),
-    );;
+    );
+  }
+
+}
+class TestApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "TestApp",
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.green[700],
+          title: Text(
+            "Appbar",
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+        ),
+        body: Center(
+          child: Container(
+            alignment: Alignment.center,
+            color: Colors.green,
+//            height: 200,
+//            width: 400,
+//            margin: EdgeInsets.all(20),
+//              margin: EdgeInsets.only(left: 30),
+            child: Column(
+              children: <Widget>[
+                Text(
+                  "Hello Flutter",
+                  textDirection:TextDirection.ltr ,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'AlexBrush',
+                    fontSize: 50,
+                  ),
+                ),
+                Text(
+                  "Hafijur",
+                  textDirection:TextDirection.ltr ,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'AlexBrush',
+                    fontSize: 30,
+                  ),
+                ),
+              ],
+            )
+          ),
+        )
+      ),
+    );
   }
 
 }
